@@ -2,7 +2,7 @@ package object Configs {
   val CassandraHost = "localhost"
   val CassandraPort = "9042"
   val CassandraKeyspace = "yelp_data_mining"
-  val SyncCassandraWithDataset = true
+  val SyncCassandraWithDataset = false
 
   //  https://www.kaggle.com/datasets/yelp-dataset/yelp-dataset
   val DataSource = "src/main/resources/yelp.json"

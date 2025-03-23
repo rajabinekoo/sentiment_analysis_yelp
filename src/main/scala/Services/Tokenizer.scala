@@ -11,7 +11,7 @@ object Tokenizer {
       .format("org.apache.spark.sql.cassandra")
       .option("keyspace", Configs.CassandraKeyspace)
       .option("table", Configs.BucketedReviewsTable)
-      .load().limit(100)
+      .load()
 
     val regexTokenizer = new RegexTokenizer()
       .setInputCol("body")

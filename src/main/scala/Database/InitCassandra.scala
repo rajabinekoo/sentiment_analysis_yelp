@@ -48,7 +48,7 @@ object InitCassandra {
             word TEXT,         
             count BIGINT,         
             status TEXT,         
-            PRIMARY KEY ((business_id), count)
+            PRIMARY KEY ((business_id), count, word, status)
           ) WITH CLUSTERING ORDER BY (count DESC);
         """)
 
