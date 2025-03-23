@@ -1,0 +1,17 @@
+services:
+  cassandra:
+    image: cassandra:5.0.3
+    container_name: cassandra
+    environment:
+      - CASSANDRA_CLUSTER_NAME=Yelp
+      - CASSANDRA_DC=datacenter1
+      - CASSANDRA_RACK=rack1
+    ports:
+      - "9042:9042"
+      - "7199:7199"
+    volumes:
+      - cassandra_data:/var/lib/cassandra
+#      - ./cassandra.yaml:/etc/cassandra/cassandra.yaml
+
+volumes:
+  cassandra_data:
